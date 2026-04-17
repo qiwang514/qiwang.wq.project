@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="wq-springmvc:war exploded2">
+    <output-path>$PROJECT_DIR$/out/artifacts/wq_springmvc_war_exploded2</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="wq-springmvc" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: dom4j:dom4j:1.1" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.7" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="wq-springmvc/web/Web" />
+    </root>
+  </artifact>
+</component>

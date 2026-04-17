@@ -1,0 +1,72 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.wq</groupId>
+  <artifactId>wq-springmvc</artifactId>
+  <packaging>war</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>wq-springmvc Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!--引入原生servlet依赖-->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <!--表示引入jar的作用范围 表示该项目在打包
+      放在生产环境的时候 不需要带上servlet-api  防止版本冲突-->
+      <scope>provided</scope>
+      <version>3.1.0</version>
+    </dependency>
+    <!--引入dom4j  解析参考文件-->
+    <dependency>
+      <groupId>dom4j</groupId>
+      <artifactId>dom4j</artifactId>
+      <version>1.1</version>
+    </dependency>
+
+    <!--引入常用的工具包-->
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.7</version>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <version>5.8.1</version>
+      <scope>test</scope>
+    </dependency>
+<!--引入jackson包 进行json操作-->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.19.2</version>
+    </dependency>
+  </dependencies>
+  <build>
+    <finalName>wq-springmvc</finalName>
+    <plugins>
+      <!-- Maven编译插件 -->
+      <plugin>
+        <!-- 插件的groupId、artifactId、version是必填项 -->
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.13.0</version> <!-- 版本号可以根据需要调整 -->
+        <configuration>
+          <target>1.8</target> <!-- JDK版本 -->
+          <compilerArgs>
+            <arg>-parameters</arg> <!-- 保留形参名称的编译参数 -->
+          </compilerArgs>
+          <encoding>utf-8</encoding> <!-- 编码 -->
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
