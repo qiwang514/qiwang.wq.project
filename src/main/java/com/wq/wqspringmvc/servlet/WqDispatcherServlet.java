@@ -279,6 +279,7 @@ public class WqDispatcherServlet extends HttpServlet {
             parametersList.add(parameter.getName());
         }
         System.out.println("目标方法的形参列表"+parametersList);
+        System.out.println("githup提交完成");
         return parametersList;
 
     }
