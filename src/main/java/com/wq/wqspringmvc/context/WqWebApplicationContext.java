@@ -178,6 +178,7 @@ public class WqWebApplicationContext {
                     //设置装配属性
                     try {
                         declaredField.set(bean,ioc.get(beanName3));
+                        System.out.println("123456");
                         //把装配的beanName3对象 补充到现在的bean 先有 beanName3（存入 IOC），再有@AutoWired触发查找，最后用beanName3找到这个 Bean
                     } catch (Exception e) {
                         e.printStackTrace();
